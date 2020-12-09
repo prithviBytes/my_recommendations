@@ -1,0 +1,68 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #74c69d, #31493c);
+}
+
+.card {
+  background-color: #e8f1f2;
+  color: #001a23 !important;
+  border-radius: 20px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  padding: 0.8rem 1.7rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 0px 1rem;
+  border: 2px solid #081c15;
+  background-color: #081c15;
+  color: #b7e4c7;
+}
+
+.btn:hover {
+  background-color: #40916c;
+  color: #081c15;
+  transform: translateY(-3px);
+}
+
+.btn:focus {
+  outline: none;
+  transform: translateY(-3px);
+  box-shadow: black;
+}
+
+i {
+  font-size: 25px;
+}
+.fa-imdb {
+  color: #ff7d00;
+}
+.fa-camera-retro {
+  color: green;
+}
+.fa-apple-alt {
+  color: red;
+}
+
+.header {
+  text-transform: uppercase;
+  color: #b3efb2;
+  background: #001a23;
+  border-radius: 10px;
+  margin-top: -10px;
+  padding: 2rem;
+}
+
+.about {
+  color: #b3efb2;
+  background: #001a23;
+  border-radius: 10px;
+  margin-bottom: -10px;
+}
