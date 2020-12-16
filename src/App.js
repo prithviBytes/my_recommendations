@@ -1,58 +1,56 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { sciFi, superhero, mystery } from "./genre";
-
+import "./index.css";
 export default function App() {
   const [genre, setGenre] = useState(sciFi);
 
   return (
     <div className="App">
-      <div className="header pt-6 pb-6 mb-6">
-        <h1 className="is-size-1 is-size-2-mobile ">Must Watch</h1>
+      <div className="header">
+        <h1>Must Watch</h1>
       </div>
-      <div className="container">
-        <div className="columns">
-          <div className="column">
+      <div className="container buttons">
+        <div className="row">
+          <div className="col-1-of-3">
             <button className="btn" onClick={() => setGenre(sciFi)}>
               Fiction
             </button>
           </div>
-          <div className="column">
+          <div className="col-1-of-3">
             {" "}
             <button className="btn" onClick={() => setGenre(superhero)}>
               Superhero
             </button>
           </div>
-          <div className="column">
+          <div className="col-1-of-3">
             <button className="btn" onClick={() => setGenre(mystery)}>
               Mystery
             </button>
           </div>
         </div>
       </div>
-      <div className="container is-max-desktop mt-6">
-        <div className="columns">
+      <div className="container">
+        <div className="row">
           {genre.map(function (movie) {
             return (
-              <div className="column is-one-third">
+              <div className="col-1-of-3">
                 <div className="card">
                   <div className="card-image">
-                    <figure className="image is-4by3">
                       <img src={movie.poster} alt="Placeholder" />
-                    </figure>
                   </div>
                   <div className="card-content">
                     <div className="media">
-                      <div className="media-content">
-                        <p className="title is-4">{movie.title}</p>
-                        <p className="subtitle is-6">{movie.director}</p>
+                      <div>
+                        <h1>{movie.title}</h1>
+                        <h3>{movie.director}</h3>
                       </div>
                     </div>
 
                     <div className="content">
                       {movie.plot}
                       <br />
-                      <p className="has-text-left mt-3">
+                      <p>
                         <i className="fab fa-imdb"></i>
                         &nbsp;IMDB: {movie.rating[0]} <br />
                         <i className="fas fa-camera-retro"></i>
@@ -68,8 +66,8 @@ export default function App() {
           })}
         </div>
       </div>
-      <div class="about has-text-centered  pt-6 pb-6 mt-6">
-        <p className="is-size-3-desktop is-size-4-mobile">About</p>
+      <div className="about">
+        <h2>About</h2>
         <p>
           Some of the movies that I have Watched and Would recommend others to
           watchh.
